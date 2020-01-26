@@ -6,5 +6,9 @@ namespace UniversityClinicProject
 {
     class Doctor : Employee
     {
+        private int doctorSalary;
+        int doctorSalary = 90000;
+
+      
     }
 }

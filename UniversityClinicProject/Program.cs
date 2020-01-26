@@ -6,7 +6,13 @@ namespace UniversityClinicProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Doctor NewDoctor = new Doctor();
+            Nurse NewNurse = new Nurse();
+            Receptionist NewReceptionist = new Receptionist();
+            Janitor NewJanitor = new Janitor();
+            Patient NewPatient = new Patient();
+
+           
         }
     }
 }
