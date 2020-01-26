@@ -6,11 +6,22 @@ namespace UniversityClinicProject
 {
     public class Employee
     {
+        //Properties
         public string Name { get; set; }
         public int IDNumber { get; set; }
-        public int PaySalary { get; set; }
+        public virtual int Salary { get; set; }
         public bool Paid { get; set; }
 
+        //Constructor
+        public Employee(string name, int anIDNumber, int salary, bool hasBeenPaid)
+        {
+            Name = name;
+            IDNumber = anIDNumber;
+            Salary = salary;
+            Paid = hasBeenPaid;
+        }
+
+        //Methods
         public void HasBeenPaid()
         {
             if (Paid == true)

@@ -6,5 +6,12 @@ namespace UniversityClinicProject
 {
     class Janitor : Employee
     {
+        //Properties
+        public override int Salary { get; set; }
+
+        //Constructor
+
+        //Methods
+
     }
 }

@@ -6,5 +6,13 @@ namespace UniversityClinicProject
 {
     class Receptionist : Employee
     {
+        //Properties
+        public override int Salary { get; set; }
+
+
+        //Constructor
+
+        //Methods
+
     }
 }
