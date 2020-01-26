@@ -4,11 +4,11 @@ using System.Text;
 
 namespace UniversityClinicProject
 {
-    abstract class Employee
+    public class Employee
     {
         public string Name { get; set; }
         public int IDNumber { get; set; }
-        public abstract int PaySalary { get; set; }
+        public int PaySalary { get; set; }
         public bool Paid { get; set; }
 
         public void HasBeenPaid()

@@ -6,6 +6,7 @@ namespace UniversityClinicProject
     {
         static void Main(string[] args)
         {
+            Employee NewEmployee = new Employee();
             Doctor NewDoctor = new Doctor();
             Nurse NewNurse = new Nurse();
             Receptionist NewReceptionist = new Receptionist();
