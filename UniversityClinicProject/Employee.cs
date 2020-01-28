@@ -13,12 +13,29 @@ namespace UniversityClinicProject
         public bool Paid { get; set; }
 
         //Constructor
-        public Employee(string name, int anIDNumber, int salary, bool hasBeenPaid)
+        public Employee()
+        { 
+        }
+
+        public Employee(string name, int iDNumber)
+        {
+            Name = name;
+            IDNumber = iDNumber;
+        }
+        
+        public Employee(string name, int anIDNumber, int salary, bool paid)
         {
             Name = name;
             IDNumber = anIDNumber;
             Salary = salary;
-            Paid = hasBeenPaid;
+            Paid = paid;
+        }
+
+        public Employee(string name, int anIDNumber, bool paid)
+        {
+            Name = name;
+            IDNumber = anIDNumber;
+            Paid = paid;
         }
 
         //Methods

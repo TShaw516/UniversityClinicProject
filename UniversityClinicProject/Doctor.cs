@@ -10,15 +10,17 @@ namespace UniversityClinicProject
 
         //Properties
         public string Specialty { get; set; }
-        public override int Salary { get; set; }
 
-        
         //Constructor
-        public Doctor (string specialty)
+        public Doctor (string name, int iDNumber, bool paid, string specialty) : base (name,iDNumber,paid)
         { 
-            {
                 Specialty = specialty;
-            }
+                Salary = 90000;
+        }
+
+        public Doctor() : base()
+        {
+            
         }
 
      
