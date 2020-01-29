@@ -23,7 +23,8 @@ namespace UniversityClinicProject
         public void DisplayReceptionistInfo()
         {
             Receptionist newReceptionist = new Receptionist("Jane", 444, true);
-            Console.WriteLine($"Receptionist:{newReceptionist.Name} ID Number:{}");
+            Console.WriteLine($"Receptionist:{newReceptionist.Name} ID Number:{newReceptionist.IDNumber} " +
+                $"Salary: {newReceptionist.Salary} {newReceptionist.Paid}");
         
         }
     }

@@ -45,6 +45,7 @@ namespace UniversityClinicProject
                         break;
 
                     case "4":
+                        newReceptionist.DisplayReceptionistInfo();
                         break;
 
                     case "5":
