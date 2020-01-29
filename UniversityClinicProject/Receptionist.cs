@@ -11,8 +11,20 @@ namespace UniversityClinicProject
 
 
         //Constructor
+        public Receptionist() : base()
+        { 
+        }
 
+        public Receptionist(string name, int iDNumber, bool paid) : base(name, iDNumber, paid)
+        {
+            Salary = 45000;
+        }
         //Methods
-
+        public void DisplayReceptionistInfo()
+        {
+            Receptionist newReceptionist = new Receptionist("Jane", 444, true);
+            Console.WriteLine($"Receptionist:{newReceptionist.Name} ID Number:{}");
+        
+        }
     }
 }

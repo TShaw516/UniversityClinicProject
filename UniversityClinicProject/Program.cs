@@ -8,13 +8,13 @@ namespace UniversityClinicProject
         {
             //new objects/classes
             Employee newEmployee = new Employee();
-            
+
             Nurse newNurse = new Nurse();
             Receptionist newReceptionist = new Receptionist();
             Janitor newJanitor = new Janitor();
             Patient newPatient = new Patient();
             Doctor newDoctor = new Doctor();
-             
+
             bool inHospital = true; //stays in menu till exit 'bool is false'
             string menuChoice = "";//Variable that saves user's choice
 
@@ -37,9 +37,11 @@ namespace UniversityClinicProject
                         break;
 
                     case "2":
+                        newNurse.DisplayNurseInfo();
                         break;
 
                     case "3":
+                        newJanitor.DisplayJanitorInfo();
                         break;
 
                     case "4":
@@ -53,31 +55,6 @@ namespace UniversityClinicProject
                 }
 
             }
-
-            Employee FirstEmployee = new Employee("Turk", 321);
-            Console.WriteLine($"{FirstEmployee.Name} {FirstEmployee.IDNumber}");
-
-            Employee SecondEmployee = new Employee();
-            Console.WriteLine($"{SecondEmployee.Name} {SecondEmployee.IDNumber}");
-
-            SecondEmployee.Name = "Jim";
-            Console.WriteLine($"{SecondEmployee.Name} {SecondEmployee.IDNumber}");
-
-            SecondEmployee.IDNumber = 2232;
-            SecondEmployee.Salary = 50000;
-            Console.WriteLine($"{SecondEmployee.Name} {SecondEmployee.IDNumber} {SecondEmployee.Salary}");
-
-            Employee ThirdEmployee = new Employee("Larry", 595959, 30000, true);
-            Console.WriteLine($"{ThirdEmployee.Name}, {ThirdEmployee.IDNumber}, {ThirdEmployee.Salary}, {ThirdEmployee.Paid}" );
-
-            //(string name, int iDNumber, int salary, bool paid, string specialty)
-           
-
-            Doctor secondDoctor = new Doctor();
-            secondDoctor.Name = "Dr. Phil";
-            Console.WriteLine(secondDoctor.Name);
-
-          
         }
     }
 }

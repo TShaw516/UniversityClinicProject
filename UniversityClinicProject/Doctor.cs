@@ -6,8 +6,7 @@ namespace UniversityClinicProject
 {
     class Doctor : Employee
     {
-        //new object
-        Patient drPatient = new Patient();
+        
 
         //Properties
         public string Specialty { get; set; }
@@ -28,8 +27,9 @@ namespace UniversityClinicProject
         //Methods
         public void DisplayDoctorsInfo()
         {
-            Doctor newDoctor = new Doctor("Doctor Bob", 869843, true, "neurosurgeon");
-            Console.WriteLine($"Doctor: {newDoctor.Name}, ID Number:{newDoctor.IDNumber}, {newDoctor.Salary}, {newDoctor.Paid}, {newDoctor.Specialty}");
+            Doctor newDoctor = new Doctor("Turk", 111, true, "Neurosurgeon");
+            Console.WriteLine($"Doctor:{newDoctor.Name}, ID Number:{newDoctor.IDNumber}, Salary:${newDoctor.Salary}, " +
+                $"{newDoctor.Paid}, Specialty:{newDoctor.Specialty}");
            
             /*string doctor = "Turk";
             int idNumber = 111;
