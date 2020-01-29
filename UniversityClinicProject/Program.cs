@@ -26,7 +26,7 @@ namespace UniversityClinicProject
                 Console.WriteLine("\n1. Doctor Turk");
                 Console.WriteLine("2. Nurse Carla");
                 Console.WriteLine("3. Janitor Neil");
-                Console.WriteLine("4. Receptionist Tatyana");
+                Console.WriteLine("4. Receptionist Jane");
                 Console.WriteLine("5. Exit");
                 menuChoice = Console.ReadLine();
 
