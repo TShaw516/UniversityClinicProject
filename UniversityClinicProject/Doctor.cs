@@ -6,26 +6,41 @@ namespace UniversityClinicProject
 {
     class Doctor : Employee
     {
-        Patient doctorsPatient = new Patient();
+        //new object
+        Patient drPatient = new Patient();
 
         //Properties
         public string Specialty { get; set; }
 
-        //Constructor
+        //Constructors
+        public Doctor() : base()
+        {
+
+        }
+
         public Doctor (string name, int iDNumber, bool paid, string specialty) : base (name,iDNumber,paid)
         { 
                 Specialty = specialty;
                 Salary = 90000;
+                
         }
-
-        public Doctor() : base()
-        {
-            
-        }
-
-     
 
         //Methods
+        public void DisplayDoctorsInfo()
+        {
+            Doctor newDoctor = new Doctor("Doctor Bob", 869843, true, "neurosurgeon");
+            Console.WriteLine($"Doctor: {newDoctor.Name}, ID Number:{newDoctor.IDNumber}, {newDoctor.Salary}, {newDoctor.Paid}, {newDoctor.Specialty}");
+           
+            /*string doctor = "Turk";
+            int idNumber = 111;
+
+            Name = doctor;
+            IDNumber = idNumber;
+          Console.WriteLine($"Doctor: {doctor} ID Number:{idNumber} ");
+            */
+        }
+
+
 
       
     }

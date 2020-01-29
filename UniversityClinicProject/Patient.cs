@@ -7,8 +7,8 @@ namespace UniversityClinicProject
     class Patient
     {
         //Properties
-        int bloodLevel = 20;
-        int healthstatus = 10;
+       // int bloodLevel = 20;
+      //  int healthstatus = 10;
 
         //Constructor
 

@@ -12,7 +12,7 @@ namespace UniversityClinicProject
         public virtual int Salary { get; set; }
         public bool Paid { get; set; }
 
-        //Constructor
+        //Constructors
         public Employee()
         { 
         }
