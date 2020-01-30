@@ -22,8 +22,8 @@ namespace UniversityClinicProject
         { 
                 Specialty = specialty;
                 Salary = 90000;
-                Name = "Turk";
-                IDNumber = 111;
+                Name = name;
+                IDNumber = iDNumber;
                 Paid = false;
         }
 

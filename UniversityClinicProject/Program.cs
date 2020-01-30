@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace UniversityClinicProject
 {
@@ -6,6 +7,9 @@ namespace UniversityClinicProject
     {
         static void Main(string[] args)
         {
+            //Create new list
+            List<Employee> employeeList = new List<Employee>();
+
             //new objects/classes
             Employee newEmployee = new Employee();
 
@@ -13,7 +17,14 @@ namespace UniversityClinicProject
             Receptionist newReceptionist = new Receptionist();
             Janitor newJanitor = new Janitor();
             Patient newPatient = new Patient();
-            Doctor newDoctor = new Doctor();
+            Doctor newDoctor = new Doctor("Turk", 111, "Neuosurgeon");
+
+            //adding employees to list
+            employeeList.Add(newDoctor);
+            employeeList.Add(newNurse);
+            employeeList.Add(newJanitor);
+            employeeList.Add(newReceptionist);
+
 
             bool inHospital = true; //stays in menu till exit 'bool is false'
             string menuChoice = "";//Variable that saves user's choice
@@ -33,7 +44,13 @@ namespace UniversityClinicProject
                 switch (menuChoice)
                 {
                     case "1":
-                        newDoctor.DisplayDoctorsInfo();
+                        foreach (Employee empList in employeeList)
+                        {
+                            // print employee info
+                            Console.WriteLine($"{newDoctor} {newNurse} {newJanitor} " +
+                                $"{newReceptionist}");
+                        }
+                          //  newDoctor.DisplayDoctorsInfo();
                         break;
 
                     case "2":
