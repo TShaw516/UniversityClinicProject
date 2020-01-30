@@ -21,7 +21,7 @@ namespace UniversityClinicProject
             //loop for list of employees
             while (inHospital)
             {
-                Console.WriteLine("University Clinic Hospital:");
+                Console.WriteLine("\nUniversity Clinic Hospital:");
                 Console.WriteLine("\nEmployee List:  ");
                 Console.WriteLine("\n1. Doctor Turk");
                 Console.WriteLine("2. Nurse Carla");

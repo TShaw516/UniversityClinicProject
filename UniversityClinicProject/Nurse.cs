@@ -22,15 +22,17 @@ namespace UniversityClinicProject
 
         public Nurse(string name, int idNumber, bool paid, int numOfPatients) : base(name, idNumber, paid)
         {
-            NumOfPatients = numOfPatients;
+            NumOfPatients = 1;
             Salary = 50000;
+            Name = "Carla";
+            IDNumber = 222;
 
         }
 
         //Methods
         public void DisplayNurseInfo()
         {
-            Nurse newNurse = new Nurse("Carla", 222, true, 1);
+            Nurse newNurse = new Nurse(Name, IDNumber, true, NumOfPatients);
             Console.WriteLine($"Nurse:{newNurse.Name} ID Number:{newNurse.IDNumber} Salary:${newNurse.Salary} " +
                 $"# of Patients:{newNurse.NumOfPatients},{newNurse.Paid}");
         }

@@ -17,24 +17,10 @@ namespace UniversityClinicProject
         { 
         }
 
-        public Employee(string name, int iDNumber)
+        public Employee(string name, int iDNumber, bool paid)
         {
             Name = name;
             IDNumber = iDNumber;
-        }
-        
-        public Employee(string name, int anIDNumber, int salary, bool paid)
-        {
-            Name = name;
-            IDNumber = anIDNumber;
-            Salary = salary;
-            Paid = paid;
-        }
-
-        public Employee(string name, int anIDNumber, bool paid)
-        {
-            Name = name;
-            IDNumber = anIDNumber;
             Paid = paid;
         }
 
