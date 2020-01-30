@@ -17,8 +17,8 @@ namespace UniversityClinicProject
         public Janitor(string name, int iDNumber) : base(name, iDNumber)
         {
             Salary = 40000;
-            Name = "Neil";
-            IDNumber = 333;
+            Name = name;
+            IDNumber = iDNumber;
             Paid = false;
         
         }

@@ -19,12 +19,12 @@ namespace UniversityClinicProject
         
         }
 
-        public Nurse(string name, int idNumber, int numOfPatients) : base(name, idNumber)
+        public Nurse(string name, int iDNumber, int numOfPatients) : base(name, iDNumber)
         {
-            NumOfPatients = 1;
+            NumOfPatients = numOfPatients;
             Salary = 50000;
-            Name = "Carla";
-            IDNumber = 222;
+            Name = name;
+            IDNumber = iDNumber;
             Paid = false;
 
         }

@@ -13,11 +13,11 @@ namespace UniversityClinicProject
             //new objects/classes
             Employee newEmployee = new Employee();
 
-            Nurse newNurse = new Nurse();
-            Receptionist newReceptionist = new Receptionist();
-            Janitor newJanitor = new Janitor();
+            Nurse newNurse = new Nurse("Carla", 222, 1);
+            Receptionist newReceptionist = new Receptionist("Jane", 444);
+            Janitor newJanitor = new Janitor("Neil", 333);
             Patient newPatient = new Patient();
-            Doctor newDoctor = new Doctor("Turk", 111, "Neuosurgeon");
+            Doctor newDoctor = new Doctor("Turk", 111, "Neurosurgeon");
 
             //adding employees to list
             employeeList.Add(newDoctor);
@@ -33,7 +33,7 @@ namespace UniversityClinicProject
             while (inHospital)
             {
                 Console.WriteLine("\nUniversity Clinic Hospital:");
-                Console.WriteLine("\nEmployee List:  ");
+                Console.WriteLine("\n1. Employee List:  ");
                 Console.WriteLine("\n1. Doctor Turk");
                 Console.WriteLine("2. Nurse Carla");
                 Console.WriteLine("3. Janitor Neil");
@@ -47,8 +47,8 @@ namespace UniversityClinicProject
                         foreach (Employee empList in employeeList)
                         {
                             // print employee info
-                            Console.WriteLine($"{newDoctor} {newNurse} {newJanitor} " +
-                                $"{newReceptionist}");
+                            Console.WriteLine($"{newDoctor.Name} {newNurse.Name} " +
+                                $"{newJanitor.Name} {newReceptionist.Name}");
                         }
                           //  newDoctor.DisplayDoctorsInfo();
                         break;
