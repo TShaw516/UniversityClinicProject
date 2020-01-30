@@ -22,7 +22,7 @@ namespace UniversityClinicProject
             while (inHospital)
             {
                 Console.WriteLine("\nUniversity Clinic Hospital:");
-                Console.WriteLine(employeeList.ListOfEmployees);
+                Console.WriteLine("\nEmployee List:  ");
                 Console.WriteLine("\n1. Doctor Turk");
                 Console.WriteLine("2. Nurse Carla");
                 Console.WriteLine("3. Janitor Neil");

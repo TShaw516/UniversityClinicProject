@@ -10,7 +10,7 @@ namespace ClinicProject.Test
         public void DoctorName()
         {
             // Arrange
-           // var newDoctor = new Doctor();
+           var newDoctor = new Doctor();
 
             // Act
             string name = "John Smith";
