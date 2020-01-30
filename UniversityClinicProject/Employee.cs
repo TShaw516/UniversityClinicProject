@@ -6,6 +6,9 @@ namespace UniversityClinicProject
 {
     public class Employee
     {
+        //Create a new List
+        List<Employee> employeeList = new List<Employee>();
+
         //Properties
         public string Name { get; set; }
         public int IDNumber { get; set; }
@@ -30,6 +33,11 @@ namespace UniversityClinicProject
             { Console.WriteLine("The Employee has been paid"); }
             else
             { Console.WriteLine("The Employee has not been paid"); }
+        }
+        public void ListOfEmployees(Employee newemployee)
+        {
+            employeeList.Add(new Employee(newemployee.Name,newemployee.IDNumber)); 
+        
         }
     }
 }        

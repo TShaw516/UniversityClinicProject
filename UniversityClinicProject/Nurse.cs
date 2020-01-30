@@ -12,27 +12,27 @@ namespace UniversityClinicProject
 
         //Properties
         int NumOfPatients { get; set; }
-        public override int Salary { get; set; }
-
+       
         //Constructor
         public Nurse() : base()
         {
         
         }
 
-        public Nurse(string name, int idNumber, bool paid, int numOfPatients) : base(name, idNumber, paid)
+        public Nurse(string name, int idNumber, int numOfPatients) : base(name, idNumber)
         {
             NumOfPatients = 1;
             Salary = 50000;
             Name = "Carla";
             IDNumber = 222;
+            Paid = false;
 
         }
 
         //Methods
         public void DisplayNurseInfo()
         {
-            Nurse newNurse = new Nurse(Name, IDNumber, true, NumOfPatients);
+            Nurse newNurse = new Nurse(Name, IDNumber, NumOfPatients);
             Console.WriteLine($"Nurse:{newNurse.Name} ID Number:{newNurse.IDNumber} Salary:${newNurse.Salary} " +
                 $"# of Patients:{newNurse.NumOfPatients},{newNurse.Paid}");
         }

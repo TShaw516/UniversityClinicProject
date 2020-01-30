@@ -22,15 +22,15 @@ namespace UniversityClinicProject
         { 
                 Specialty = specialty;
                 Salary = 90000;
-            Name = "Turk";
-            IDNumber = 111;
-            bool paid = false;
+                Name = "Turk";
+                IDNumber = 111;
+                Paid = false;
         }
 
         //Methods
         public void DisplayDoctorsInfo()
         {
-            Doctor newDoctor = new Doctor(Name, IDNumber, true, "Neurosurgeon");
+            Doctor newDoctor = new Doctor(Name, IDNumber, "Neurosurgeon");
             Console.WriteLine($"Doctor:{newDoctor.Name} ID Number:{newDoctor.IDNumber} Salary:${newDoctor.Salary}, " +
                 $"{newDoctor.Paid}, Specialty:{newDoctor.Specialty}");
            

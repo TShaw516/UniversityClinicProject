@@ -7,8 +7,7 @@ namespace UniversityClinicProject
     class Receptionist : Employee
     {
         //Properties
-        public override int Salary { get; set; }
-        
+       
 
         //Constructor
         public Receptionist() : base()
@@ -20,12 +19,12 @@ namespace UniversityClinicProject
             Salary = 45000;
             Name = "Jane";
             IDNumber = 444;
-            bool paid = false;
+            Paid = false;
         }
         //Methods
         public void DisplayReceptionistInfo()
         {
-            Receptionist newReceptionist = new Receptionist(Name, IDNumber, true);
+            Receptionist newReceptionist = new Receptionist(Name, IDNumber);
             Console.WriteLine($"Receptionist:{newReceptionist.Name} ID Number:{newReceptionist.IDNumber} " +
                 $"Salary: {newReceptionist.Salary} {newReceptionist.Paid}");
         
