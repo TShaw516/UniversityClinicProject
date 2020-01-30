@@ -15,11 +15,12 @@ namespace UniversityClinicProject
         { 
         }
 
-        public Receptionist(string name, int iDNumber, bool paid) : base(name, iDNumber, paid)
+        public Receptionist(string name, int iDNumber) : base(name, iDNumber)
         {
             Salary = 45000;
             Name = "Jane";
             IDNumber = 444;
+            bool paid = false;
         }
         //Methods
         public void DisplayReceptionistInfo()

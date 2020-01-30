@@ -3,7 +3,7 @@ using Xunit;
 
 namespace ClinicProject.Test
 {
-    public class UnitTest1
+    public class EmployeeTests
     {
         [Fact]
         public void DoctorName()

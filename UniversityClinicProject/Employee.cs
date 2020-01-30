@@ -17,11 +17,10 @@ namespace UniversityClinicProject
         { 
         }
 
-        public Employee(string name, int iDNumber, bool paid)
+        public Employee(string name, int iDNumber)
         {
             Name = name;
             IDNumber = iDNumber;
-            Paid = paid;
         }
 
         //Methods

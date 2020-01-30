@@ -17,12 +17,14 @@ namespace UniversityClinicProject
 
         }
 
-        public Doctor (string name, int iDNumber, bool paid, string specialty) : base (name, iDNumber, paid)
+        public Doctor (string name, int iDNumber, string specialty) : base (name, iDNumber)
+
         { 
                 Specialty = specialty;
                 Salary = 90000;
             Name = "Turk";
-            IDNumber = 111;        
+            IDNumber = 111;
+            bool paid = false;
         }
 
         //Methods
