@@ -44,11 +44,10 @@ namespace UniversityClinicProject
                 switch (menuChoice)
                 {
                     case "1":
-                        foreach (Employee empList in employeeList)
+                        foreach (Employee employee in employeeList)
                         {
                             // print employee info
-                            Console.WriteLine($"{newDoctor.Name} {newNurse.Name} " +
-                                $"{newJanitor.Name} {newReceptionist.Name}");
+                            Console.WriteLine($"{employee.Name}");
                         }
                           //  newDoctor.DisplayDoctorsInfo();
                         break;
