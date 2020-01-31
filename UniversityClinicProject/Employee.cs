@@ -34,14 +34,18 @@ namespace UniversityClinicProject
             else
             { Console.WriteLine("The Employee has not been paid"); }
         }
-      /*  public void ListOfEmployees(Employee newemployee)
-        {
-            var employeeList = new List<Employee> {Doctor.Name,  };
-            foreach (var name in names)
-            {
-                Console.WriteLine($"Hello {name.ToUpper()}!");
-            }*/
+
+        public virtual void DrawBlood()
+        { 
+        
         }
+
+        public virtual void CareForPatient()
+        { 
+        
+        }
+      
+    }
 }        
              
 

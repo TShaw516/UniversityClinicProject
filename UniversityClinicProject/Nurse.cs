@@ -36,6 +36,12 @@ namespace UniversityClinicProject
             Console.WriteLine($"Nurse:{newNurse.Name} ID Number:{newNurse.IDNumber} Salary:${newNurse.Salary} " +
                 $"# of Patients:{newNurse.NumOfPatients},{newNurse.Paid}");
         }
+        public override void DrawBlood()
+        {
+            int bloodDrawn = nursePatient.BloodLevel;
+            bloodDrawn -= 1;
+            Console.WriteLine($"Nurse {Name} has successfully drawn blood!");
+        }
 
     }
 }

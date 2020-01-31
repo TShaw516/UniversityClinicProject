@@ -6,7 +6,8 @@ namespace UniversityClinicProject
 {
     class Doctor : Employee
     {
-        
+        //new object
+        Patient drPatient = new Patient();
 
         //Properties
         public string Specialty { get; set; }
@@ -36,8 +37,15 @@ namespace UniversityClinicProject
            
         }
 
+        public override void DrawBlood()
+        {
+            int bloodDrawn = drPatient.BloodLevel;
+            bloodDrawn -= 2;
+            Console.WriteLine($"Dr. {Name} has successfully drawn blood!");
+        }
 
 
-      
+
+
     }
 }

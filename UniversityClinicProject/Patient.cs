@@ -9,8 +9,8 @@ namespace UniversityClinicProject
         //Properties
         private int bloodLevel;
         private int healthStatus;
-        int BloodLevel { get; set; }
-        int HealthStatus {get; set; }
+       public int BloodLevel { get; set; }
+       public int HealthStatus {get; set; }
 
         //Constructor
         public Patient()
