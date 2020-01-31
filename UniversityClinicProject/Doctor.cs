@@ -31,9 +31,8 @@ namespace UniversityClinicProject
         //Methods
         public override void DisplayInfo()
         {
-            Doctor newDoctor = new Doctor(Name, IDNumber, "Neurosurgeon");
-            Console.WriteLine($"Doctor:{newDoctor.Name} ID Number:{newDoctor.IDNumber} Salary:${newDoctor.Salary}, " +
-                $"{newDoctor.Paid}, Specialty:{newDoctor.Specialty}");
+            Console.WriteLine($"Doctor:{Name} ID Number:{IDNumber} Salary:${Salary}, " +
+                $"{Paid}, Specialty:{Specialty}");
            
         }
 

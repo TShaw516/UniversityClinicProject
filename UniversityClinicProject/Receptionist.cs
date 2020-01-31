@@ -25,9 +25,8 @@ namespace UniversityClinicProject
         //Methods
         public override void DisplayInfo()
         {
-            Receptionist newReceptionist = new Receptionist(Name, IDNumber);
-            Console.WriteLine($"Receptionist:{newReceptionist.Name} ID Number:{newReceptionist.IDNumber} " +
-                $"Salary: {newReceptionist.Salary} {newReceptionist.Paid}");
+            Console.WriteLine($"Receptionist:{Name} ID Number:{IDNumber} Salary: {Salary} {Paid}");
+              
         
         }
         /* public void IsReceptionistOnPhone()

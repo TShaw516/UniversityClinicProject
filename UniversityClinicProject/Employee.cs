@@ -7,7 +7,7 @@ namespace UniversityClinicProject
     public class Employee
     {
         //Create a new List
-        List<Employee> employeeList = new List<Employee>();
+        public List<Employee> employeeList = new List<Employee>();
 
         //Properties
         public string Name { get; set; }
@@ -44,8 +44,7 @@ namespace UniversityClinicProject
             foreach (Employee employee in employeeList)
             {
 
-                // print employee info
-                Console.WriteLine($"{counter}.{Name}");
+                employee.DisplayInfo();
                 counter++;
 
             }

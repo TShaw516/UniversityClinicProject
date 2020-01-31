@@ -26,16 +26,14 @@ namespace UniversityClinicProject
             Name = name;
             IDNumber = iDNumber;
             Paid = false;
-
         }
 
         //Methods
         public override void DisplayInfo()
         {
-            Nurse newNurse = new Nurse(Name, IDNumber, NumOfPatients);
-            Console.WriteLine($"Nurse:{newNurse.Name} ID Number:{newNurse.IDNumber} Salary:${newNurse.Salary} " +
-                $"# of Patients:{newNurse.NumOfPatients},{newNurse.Paid}");
+            Console.WriteLine($"Nurse:{Name} ID Number:{IDNumber} Salary:${Salary} # of Patients:{NumOfPatients},{Paid}");
         }
+        
         public override void DrawBlood()
         {
             int bloodDrawn = nursePatient.BloodLevel;

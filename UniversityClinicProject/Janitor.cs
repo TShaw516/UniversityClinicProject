@@ -25,9 +25,7 @@ namespace UniversityClinicProject
         //Methods
         public override void DisplayInfo()
         {
-            Janitor newJanitor = new Janitor(Name, IDNumber);
-            Console.WriteLine($"Janitor:{newJanitor.Name} ID Number:{newJanitor.IDNumber} Salary:${newJanitor.Salary} {newJanitor.Paid}");
-
+            Console.WriteLine($"Janitor:{Name} ID Number:{IDNumber} Salary:${Salary} {Paid}");
         }
 
         public override void PaySalary()
