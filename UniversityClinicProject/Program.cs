@@ -13,11 +13,11 @@ namespace UniversityClinicProject
             //new objects/classes
             Employee newEmployee = new Employee();
 
-            Nurse newNurse = new Nurse("Carla", 222, 1);
-            Receptionist newReceptionist = new Receptionist("Jane", 444);
-            Janitor newJanitor = new Janitor("Neil", 333);
+            Nurse newNurse = new Nurse("Nurse: Carla Riley", 222, 1);
+            Receptionist newReceptionist = new Receptionist("Receptionist: Jane Reynolds", 444);
+            Janitor newJanitor = new Janitor("Janitor: Neil Patricks", 333);
             Patient newPatient = new Patient();
-            Doctor newDoctor = new Doctor("Turk", 111, "Neurosurgeon");
+            Doctor newDoctor = new Doctor("Doctor: Turk Monks", 111, "Neurosurgeon");
 
             //adding employees to list
             employeeList.Add(newDoctor);
@@ -41,12 +41,16 @@ namespace UniversityClinicProject
                 switch (menuChoice)
                 {
                     case "1":
+                        Console.WriteLine("\nClick on an employee to find out more..\n");
+
                         foreach (Employee employee in employeeList)
                         {
                             // print employee info
                             Console.WriteLine($"{employee.Name}");
+                            
                         }
-                          //  newDoctor.DisplayDoctorsInfo();
+                        Console.ReadLine();
+                        //  newDoctor.DisplayDoctorsInfo();
                         break;
 
                     case "2":
