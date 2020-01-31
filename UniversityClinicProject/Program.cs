@@ -37,16 +37,19 @@ namespace UniversityClinicProject
                 Console.WriteLine("\n1. Employee List:  ");
                 Console.WriteLine("2. Exit");
                 menuChoice = Console.ReadLine();
+                Console.Clear();
 
                 switch (menuChoice)
                 {
                     case "1":
                         Console.WriteLine("\nClick on an employee to find out more..\n");
 
+                        int counter = 1;
                         foreach (Employee employee in employeeList)
-                        {
+                        { 
                             // print employee info
-                            Console.WriteLine($"{employee.Name}");
+                            Console.WriteLine($"{counter}.{employee.Name}");
+                            counter++;
                             
                         }
                         Console.ReadLine();
