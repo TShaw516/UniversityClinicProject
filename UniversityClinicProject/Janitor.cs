@@ -29,5 +29,13 @@ namespace UniversityClinicProject
             Console.WriteLine($"Janitor:{newJanitor.Name} ID Number:{newJanitor.IDNumber} Salary:${newJanitor.Salary} {newJanitor.Paid}");
 
         }
+
+        public override void PaySalary()
+        {
+            if (Paid)
+            { Console.WriteLine($"Janitor {Name} has been paid"); }
+            else
+            { Console.WriteLine($"Janitor {Name} has already been paid"); }
+        }
     }
 }

@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace ClinicProject.Test
+namespace UniversityClinicProject.Test
 {
     public class EmployeeTests
     {

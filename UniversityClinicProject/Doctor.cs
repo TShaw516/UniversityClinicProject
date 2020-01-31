@@ -51,6 +51,14 @@ namespace UniversityClinicProject
             Console.WriteLine($"Dr. {Name} has successfully cared for the patient");
         }
 
+        public override void PaySalary()
+        {
+            if (Paid)
+            { Console.WriteLine($"Dr. {Name} has been paid"); }
+            else
+            { Console.WriteLine($"Dr. {Name} has already been paid"); }
+        }
+
 
 
 

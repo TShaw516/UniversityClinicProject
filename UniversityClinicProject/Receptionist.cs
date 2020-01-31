@@ -30,17 +30,25 @@ namespace UniversityClinicProject
                 $"Salary: {newReceptionist.Salary} {newReceptionist.Paid}");
         
         }
-       /* public void IsReceptionistOnPhone()
+        /* public void IsReceptionistOnPhone()
+         {
+             onThePhone = true;
+             if (onThePhone)
+             {
+                 Console.WriteLine("On the phone");
+             }
+             else 
+             {
+                 Console.WriteLine("Not on the phone");
+             }
+         */
+
+        public override void PaySalary()
         {
-            onThePhone = true;
-            if (onThePhone)
-            {
-                Console.WriteLine("On the phone");
-            }
-            else 
-            {
-                Console.WriteLine("Not on the phone");
-            }
-        */
+            if (Paid)
+            { Console.WriteLine($"Receptionist {Name} has been paid"); }
+            else
+            { Console.WriteLine($"Receptionist {Name} has already been paid"); }
+        }
     }
 }

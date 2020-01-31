@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ClinicProject.Test
+namespace UniversityClinicProject.Test
 {
     class JanitorTests
     {
