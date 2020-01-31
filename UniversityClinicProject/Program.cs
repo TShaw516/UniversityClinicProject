@@ -27,7 +27,7 @@ namespace UniversityClinicProject
 
 
             bool inHospital = true; //stays in menu till exit 'bool is false'
-            string menuChoice = "";//Variable that saves user's choice
+            string mainMenuChoice = "";//Variable that saves user's choice
 
             //menu to lead to employee list
 
@@ -36,10 +36,10 @@ namespace UniversityClinicProject
                 Console.WriteLine("\nUniversity Clinic Hospital:");
                 Console.WriteLine("\n1. Employee List:  ");
                 Console.WriteLine("2. Exit");
-                menuChoice = Console.ReadLine();
+                mainMenuChoice = Console.ReadLine();
                 Console.Clear();
 
-                switch (menuChoice)
+                switch (mainMenuChoice)
                 {
                     case "1":
 
@@ -55,8 +55,20 @@ namespace UniversityClinicProject
                             counter++;
 
                         }
-                        int userChoice = Convert.ToInt32(Console.ReadLine());
-                        _ = employeeList[userChoice - 1];
+                        int employeeChoice = Convert.ToInt32(Console.ReadLine());
+                        Employee chosenEmployee = employeeList[employeeChoice - 1];
+
+                        //new menu for employee interaction
+                        string actionMenu = "";
+                        bool choosingAction = true;
+                        while (choosingAction)
+                        {
+                            Console.WriteLine();
+                        
+                        
+                        }
+
+
                         break;
 
                     case "2":
