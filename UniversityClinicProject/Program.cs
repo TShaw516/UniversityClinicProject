@@ -42,18 +42,21 @@ namespace UniversityClinicProject
                 switch (menuChoice)
                 {
                     case "1":
-                        Console.WriteLine("\nClick on an employee to find out more..\n");
+
+                Console.WriteLine("\nClick on an employee to find out more..\n");
 
                         int counter = 1;
+                       
                         foreach (Employee employee in employeeList)
                         { 
+                            
                             // print employee info
                             Console.WriteLine($"{counter}.{employee.Name}");
                             counter++;
-                            
+
                         }
-                        Console.ReadLine();
-                        //  newDoctor.DisplayDoctorsInfo();
+                        int userChoice = Convert.ToInt32(Console.ReadLine());
+                        _ = employeeList[userChoice - 1];
                         break;
 
                     case "2":
