@@ -35,6 +35,36 @@ namespace UniversityClinicProject
             { Console.WriteLine("The Employee has not been paid"); }
         }
 
+        public void DisplayEmployees()
+        {
+            Console.WriteLine("\nClick on an employee to find out more..\n");
+
+            int counter = 1;
+
+            foreach (Employee employee in employeeList)
+            {
+
+                // print employee info
+                Console.WriteLine($"{counter}.{Name}");
+                counter++;
+
+            }
+            int employeeChoice = Convert.ToInt32(Console.ReadLine());
+            Employee chosenEmployee = employeeList[employeeChoice - 1];
+        }
+
+        public void SelectedEmployee()
+        {
+            string actionMenu = "";
+            bool choosingAction = true;
+            while (choosingAction)
+            {
+                Console.WriteLine("Employee Information");
+                Console.WriteLine($"Name:{Name} ID Number:{IDNumber} Salary:{Salary}, Pay Status: {Paid}, Specialty:{newDoctor.Specialty}");
+              
+            }
+        }
+    
         public virtual void DrawBlood()
         { 
         
@@ -44,6 +74,8 @@ namespace UniversityClinicProject
         { 
         
         }
+
+        
       
     }
 }        

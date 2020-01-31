@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UniversityClinicProject
 {
-    class Receptionist : Employee
+    public class Receptionist : Employee
     {
         //Properties
        // public bool OnThePhone { get; set; }

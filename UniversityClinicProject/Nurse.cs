@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UniversityClinicProject
 {
-    class Nurse : Employee
+    public class Nurse : Employee
 
     {
         //new object
@@ -40,7 +40,14 @@ namespace UniversityClinicProject
         {
             int bloodDrawn = nursePatient.BloodLevel;
             bloodDrawn -= 1;
-            Console.WriteLine($"Nurse {Name} has successfully drawn blood!");
+            Console.WriteLine($"Nurse {Name} has successfully drawn blood");
+        }
+
+        public override void CareForPatient()
+        {
+            int healthStatus = nursePatient.HealthStatus;
+            healthStatus += 1;
+            Console.WriteLine($"Nurse {Name} has successfully cared for the patient");
         }
 
     }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UniversityClinicProject
 {
-    class Janitor : Employee
+    public class Janitor : Employee
     {
         //Properties
 

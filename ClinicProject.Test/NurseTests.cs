@@ -1,10 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using Xunit;
 
-namespace ClinicProject.Test
+namespace UniversityClinicProject.tests
 {
-    class NurseTests
+    public class NurseTests
     {
+        [Fact]
+        public void DrawBlood_Does_Decrease()
+        {
+            //Arrange
+            var newNurse = new Nurse();
+
+            //Act
+
+
+            //Assert
+        }
+
+
     }
 }

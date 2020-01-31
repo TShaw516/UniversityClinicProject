@@ -43,33 +43,7 @@ namespace UniversityClinicProject
                 {
                     case "1":
 
-                Console.WriteLine("\nClick on an employee to find out more..\n");
 
-                        int counter = 1;
-                       
-                        foreach (Employee employee in employeeList)
-                        { 
-                            
-                            // print employee info
-                            Console.WriteLine($"{counter}.{employee.Name}");
-                            counter++;
-
-                        }
-                        int employeeChoice = Convert.ToInt32(Console.ReadLine());
-                        Employee chosenEmployee = employeeList[employeeChoice - 1];
-
-                        //new menu for employee interaction
-                        string actionMenu = "";
-                        bool choosingAction = true;
-                        while (choosingAction)
-                        {
-                            Console.WriteLine();
-                        
-                        
-                        }
-
-
-                        break;
 
                     case "2":
                         inHospital = false;
