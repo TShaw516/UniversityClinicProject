@@ -30,7 +30,7 @@ namespace UniversityClinicProject
         }
 
         //Methods
-        public void DisplayNurseInfo()
+        public override void DisplayInfo()
         {
             Nurse newNurse = new Nurse(Name, IDNumber, NumOfPatients);
             Console.WriteLine($"Nurse:{newNurse.Name} ID Number:{newNurse.IDNumber} Salary:${newNurse.Salary} " +

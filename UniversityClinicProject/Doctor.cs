@@ -29,7 +29,7 @@ namespace UniversityClinicProject
         }
 
         //Methods
-        public void DisplayDoctorsInfo()
+        public override void DisplayInfo()
         {
             Doctor newDoctor = new Doctor(Name, IDNumber, "Neurosurgeon");
             Console.WriteLine($"Doctor:{newDoctor.Name} ID Number:{newDoctor.IDNumber} Salary:${newDoctor.Salary}, " +

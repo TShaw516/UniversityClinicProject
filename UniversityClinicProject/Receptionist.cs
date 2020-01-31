@@ -23,7 +23,7 @@ namespace UniversityClinicProject
             Paid = false;
         }
         //Methods
-        public void DisplayReceptionistInfo()
+        public override void DisplayInfo()
         {
             Receptionist newReceptionist = new Receptionist(Name, IDNumber);
             Console.WriteLine($"Receptionist:{newReceptionist.Name} ID Number:{newReceptionist.IDNumber} " +

@@ -65,6 +65,11 @@ namespace UniversityClinicProject
               
             }
         }
+
+        public virtual void DisplayInfo()
+        { 
+        
+        }
     
         public virtual void DrawBlood()
         { 
