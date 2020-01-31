@@ -53,7 +53,7 @@ namespace UniversityClinicProject
 
         public override void PaySalary()
         {
-            if (Paid)
+            if (Paid == false)
             { Console.WriteLine($"Dr. {Name} has been paid"); }
             else
             { Console.WriteLine($"Dr. {Name} has already been paid"); }
