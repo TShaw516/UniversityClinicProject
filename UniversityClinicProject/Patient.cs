@@ -7,10 +7,17 @@ namespace UniversityClinicProject
     class Patient
     {
         //Properties
-       // int bloodLevel = 20;
-      //  int healthstatus = 10;
+        private int bloodLevel;
+        private int healthStatus;
+        int BloodLevel { get; set; }
+        int HealthStatus {get; set; }
 
         //Constructor
+        public Patient()
+        {
+            BloodLevel = 20;
+            HealthStatus = 10;
+        }
 
         //Methods
     }
