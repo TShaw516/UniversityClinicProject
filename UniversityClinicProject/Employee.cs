@@ -35,7 +35,7 @@ namespace UniversityClinicProject
             { Console.WriteLine("The Employee has not been paid"); }
         }
 
-        public void SelectEmployee()
+        public void DisplayEmployees()
         {
             Console.WriteLine("\nClick on an employee to find out more..\n");
 
@@ -46,10 +46,8 @@ namespace UniversityClinicProject
 
                 employee.DisplayInfo();
                 counter++;
-
             }
-            int employeeChoice = Convert.ToInt32(Console.ReadLine());
-            Employee chosenEmployee = employeeList[employeeChoice - 1];
+            
         }
 
         
@@ -59,9 +57,8 @@ namespace UniversityClinicProject
             bool choosingAction = true;
             while (choosingAction)
             {
-                Console.WriteLine("Employee Information");
-                Console.WriteLine($"Name:{Name} ID Number:{IDNumber} Salary:{Salary}, Pay Status: {Paid}");
-              
+                int employeeChoice = Convert.ToInt32(Console.ReadLine());
+                Employee chosenEmployee = employeeList[employeeChoice - 1];
             }
         }
 

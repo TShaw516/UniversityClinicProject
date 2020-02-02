@@ -9,11 +9,11 @@ namespace UniversityClinicProject
         {
             //new objects/classes
             Employee newEmployee = new Employee();
-            Nurse newNurse = new Nurse("Nurse: Carla Riley", 222, 1);
-            Receptionist newReceptionist = new Receptionist("Receptionist: Jane Reynolds", 444);
-            Janitor newJanitor = new Janitor("Janitor: Neil Patricks", 333);
+            Nurse newNurse = new Nurse("Nurse Carla Riley", 222, 1);
+            Receptionist newReceptionist = new Receptionist("Receptionist Jane Reynolds", 444);
+            Janitor newJanitor = new Janitor("Janitor Neil Patricks", 333);
             Patient newPatient = new Patient();
-            Doctor newDoctor = new Doctor("Doctor: Turk Monks", 111, "Neurosurgeon");
+            Doctor newDoctor = new Doctor("Doctor Turk Monks", 111, "Neurosurgeon");
 
             //adding employees to list
             newEmployee.employeeList.Add(newDoctor);
