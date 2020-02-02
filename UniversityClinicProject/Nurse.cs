@@ -31,7 +31,7 @@ namespace UniversityClinicProject
         //Methods
         public override void DisplayInfo()
         {
-            Console.WriteLine($"\n2. {Name} ID Number: {IDNumber} Salary: {Salary} # of Patients:{NumOfPatients}");
+            Console.WriteLine($"\n2. {Name} | ID Number: {IDNumber} | Salary: ${Salary} | # of Patients: {NumOfPatients}");
         }
         
         public override void DrawBlood(Patient newPatient)

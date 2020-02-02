@@ -31,7 +31,7 @@ namespace UniversityClinicProject
         //Methods
         public override void DisplayInfo()
         {
-            Console.WriteLine($"\n1. {Name} ID Number:{IDNumber} Salary:${Salary}, Specialty:{Specialty}");
+            Console.WriteLine($"\n1. {Name} | ID Number: {IDNumber} | Salary: ${Salary} | Specialty: {Specialty}");
            
         }
 
