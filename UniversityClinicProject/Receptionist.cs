@@ -23,7 +23,7 @@ namespace UniversityClinicProject
             Paid = false;
         }
         //Methods
-        public override void DisplayInfo(int counter)
+        public override void DisplayInfo()
         {
             Console.WriteLine($"\n4. {Name} ID Number:{IDNumber} Salary: {Salary}");
               

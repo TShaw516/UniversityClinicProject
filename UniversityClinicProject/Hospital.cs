@@ -6,15 +6,18 @@ namespace UniversityClinicProject
 {
     public class Hospital
     {
+        // Properties
         public List<Employee> medicalEmployeeList = new List<Employee>();
         public List<Employee> regularEmployeeList = new List<Employee>();
         public List<Patient> patientList = new List<Patient>();
-
+      
+        //Constructors
         public Hospital()
         {
 
         }
 
+        //Methods
         public void AddDoctorToMedicalEmployee(Doctor myDoctor)
         {
             medicalEmployeeList.Add(myDoctor);
@@ -40,12 +43,62 @@ namespace UniversityClinicProject
             regularEmployeeList.Add(myJanitor);
         }
 
-        public Employee SelectEmployee()
+        public void ShowAllMedicalEmployeeInfo()
+        {
+            for (int i = 0; i < medicalEmployeeList.Count; i++)
+            {
+                medicalEmployeeList[i].DisplayInfo();
+            }
+        }
+
+        public void ShowAllRegularEmployeeInfo()
+        {
+            for (int i = 0; i < regularEmployeeList.Count; i++)
+            {
+                regularEmployeeList[i].DisplayInfo();
+            }
+        }
+
+
+        public void ListMedicalEmployeeSelection()
+        {
+            int medicalEmployeeChoice;
+            medicalEmployeeChoice = 1;
+            Console.WriteLine("Select the pet you want to interact with!");
+
+            foreach (Employee newEmployee in medicalEmployeeList)
+            {
+                Console.WriteLine($"{medicalEmployeeChoice}. {newEmployee.Name} | {newEmployee.IDNumber}");
+                medicalEmployeeChoice++;
+            }
+        }
+
+        public void ListRegularEmployeeSelection()
+        {
+            int regularEmployeeChoice;
+            regularEmployeeChoice = 1;
+            Console.WriteLine("Select the pet you want to interact with!");
+
+            foreach (Employee newEmployee in medicalEmployeeList)
+            {
+                Console.WriteLine($"{regularEmployeeChoice}. {newEmployee.Name} | {newEmployee.IDNumber}");
+                regularEmployeeChoice++;
+            }
+        }
+
+        public Employee SelectMedicalEmployee()
         {
             int employeeChoice = Convert.ToInt32(Console.ReadLine());
-            Employee chosenEmployee = employeeList[employeeChoice - 1];
-            Console.Clear();
+            int chosenEmployee = (employeeChoice - 1);
+            return medicalEmployeeList[chosenEmployee];
         }
+        public Employee SelectRegularEmployee()
+        {
+            int employeeChoice = Convert.ToInt32(Console.ReadLine());
+            int chosenEmployee = (employeeChoice - 1);
+            return regularEmployeeList[chosenEmployee];
+        }
+
 
 
     }

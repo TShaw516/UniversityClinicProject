@@ -27,13 +27,22 @@ namespace UniversityClinicProject
         }
 
         //Methods
-        public void DisplayEmployees()
+        public void MainMenu()
+        {
+            Console.WriteLine("Main Menu:");
+            Console.WriteLine("Show Medical Employee List");
+            Console.WriteLine("Show Regular Employee List");
+            Console.WriteLine("Exit Application");
+            Console.WriteLine("Select a number to perform an action");
+        }
+
+        /*public void DisplayEmployees()
         {
             Console.WriteLine("\nClick on an employee to find out more..\n");
             int counter = 1;
             foreach (Employee employees in employeeList)
             {
-                employees.DisplayInfo(counter);
+                employees.DisplayInfo();
                 counter++;  
             } 
         }
@@ -80,6 +89,7 @@ namespace UniversityClinicProject
                 Console.WriteLine($"Employee can't draw blood.  Only Medical Profesionals");
                      }
         }
+        */
 
         public void HasBeenPaid()
         {
@@ -89,7 +99,7 @@ namespace UniversityClinicProject
             { Console.WriteLine("The Employee has not been paid"); }
         }
 
-        public virtual void DisplayInfo(int counter)
+        public virtual void DisplayInfo()
         { 
         
         }

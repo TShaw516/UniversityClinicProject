@@ -14,12 +14,13 @@ namespace UniversityClinicProject
             Janitor newJanitor = new Janitor("Janitor Neil Patricks", 333);
             Patient newPatient = new Patient();
             Doctor newDoctor = new Doctor("Doctor Turk Monks", 111, "Neurosurgeon");
+            Hospital theHospital = new Hospital();
 
             //adding employees to list
-            newEmployee.employeeList.Add(newDoctor);
-            newEmployee.employeeList.Add(newNurse);
-            newEmployee.employeeList.Add(newJanitor);
-            newEmployee.employeeList.Add(newReceptionist);
+            theHospital.medicalEmployeeList.Add(newDoctor);
+            theHospital.medicalEmployeeList.Add(newNurse);
+            theHospital.regularEmployeeList.Add(newJanitor);
+            theHospital.regularEmployeeList.Add(newReceptionist);
 
             bool inHospital = true; //stays in menu till exit 'bool is false'
             string mainMenuChoice = "";
@@ -28,11 +29,7 @@ namespace UniversityClinicProject
 
             while (inHospital)
             {
-                Console.WriteLine("\nWelcome to University Clinic Hospital Database");
-                Console.WriteLine("\n1. Employee List:  ");
-                Console.WriteLine("2. Exit");
-                mainMenuChoice = Console.ReadLine();
-                Console.Clear();
+                newEmployee.MainMenu();
 
                 switch (mainMenuChoice)
                 {
