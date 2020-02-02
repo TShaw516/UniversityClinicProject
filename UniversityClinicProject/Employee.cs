@@ -17,7 +17,7 @@ namespace UniversityClinicProject
 
         //Constructors
         public Employee()
-        { 
+        {
         }
 
         public Employee(string name, int iDNumber)
@@ -27,39 +27,60 @@ namespace UniversityClinicProject
         }
 
         //Methods
+
+        public void DisplayEmployees()
+        {
+            Console.WriteLine("\nClick on an employee to find out more..\n");
+
+            foreach (Employee employees in employeeList)
+            {
+                employees.DisplayInfo();
+             
+            }
+
+        }
+
+        public void SelectEmployee()
+        {
+            //user inserts chosen employee that corresponds to list index
+            int employeeChoice = Convert.ToInt32(Console.ReadLine());
+            Employee chosenEmployee = employeeList[employeeChoice - 1];
+            Console.Clear();
+
+            //menu to choose task for employee
+            Console.WriteLine("What do you want your employee to do?");
+            Console.WriteLine("1. Draw Blood");
+            Console.WriteLine("2. Care For Patient");
+            Console.WriteLine("3. Pay Employee");
+            Console.WriteLine("4. Exit");
+           string taskChoice = Console.ReadLine();
+
+            switch (taskChoice)
+            {
+                case "1":
+                    DrawBlood;
+                    break;
+
+                case "2":
+                    break;
+
+                case "3":
+                    break;
+
+                case "4":
+                    Console.Clear();
+                    break;
+
+            }
+
+        }
+
         public void HasBeenPaid()
         {
             if (Paid == true)
             { Console.WriteLine("The Employee has been paid"); }
             else
             { Console.WriteLine("The Employee has not been paid"); }
-        }
-
-        public void DisplayEmployees()
-        {
-            Console.WriteLine("\nClick on an employee to find out more..\n");
-
-            int counter = 1;
-
-            foreach (Employee employee in employeeList)
-            {
-
-                employee.DisplayInfo();
-                counter++;
-            }
-            
-        }
-
-        
-      public void ShowEmployeeInfo()
-        {
-            string actionMenu = "";
-            bool choosingAction = true;
-            while (choosingAction)
-            {
-                int employeeChoice = Convert.ToInt32(Console.ReadLine());
-                Employee chosenEmployee = employeeList[employeeChoice - 1];
-            }
         }
 
         public virtual void DisplayInfo()

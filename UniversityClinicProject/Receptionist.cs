@@ -25,7 +25,7 @@ namespace UniversityClinicProject
         //Methods
         public override void DisplayInfo()
         {
-            Console.WriteLine($"Receptionist:{Name} ID Number:{IDNumber} Salary: {Salary} {Paid}");
+            Console.WriteLine($"\n4. {Name} ID Number:{IDNumber} Salary: {Salary} {Paid}");
               
         
         }

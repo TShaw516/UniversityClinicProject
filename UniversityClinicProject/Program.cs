@@ -22,9 +22,9 @@ namespace UniversityClinicProject
             newEmployee.employeeList.Add(newReceptionist);
 
             bool inHospital = true; //stays in menu till exit 'bool is false'
-            string mainMenuChoice = "";//Variable that saves user's choice
+            string mainMenuChoice = "";
 
-            //menu to lead to employee list
+           //main menu
 
             while (inHospital)
             {
@@ -37,12 +37,16 @@ namespace UniversityClinicProject
                 switch (mainMenuChoice)
                 {
                     case "1":
+                        newEmployee.DisplayEmployees();
                         newEmployee.SelectEmployee();
                         break;
 
 
                     case "2":
                         inHospital = false;
+                        break;
+
+                    default:
                         break;
                 }
 

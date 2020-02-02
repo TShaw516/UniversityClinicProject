@@ -31,7 +31,7 @@ namespace UniversityClinicProject
         //Methods
         public override void DisplayInfo()
         {
-            Console.WriteLine($"Nurse:{Name} ID Number:{IDNumber} Salary:${Salary} # of Patients:{NumOfPatients},{Paid}");
+            Console.WriteLine($"\n2. {Name} ID Number:{IDNumber} Salary:${Salary} # of Patients:{NumOfPatients},{Paid}");
         }
         
         public override void DrawBlood()
@@ -45,7 +45,7 @@ namespace UniversityClinicProject
         {
             int healthStatus = nursePatient.HealthStatus;
             healthStatus += 1;
-            Console.WriteLine($"Nurse {Name} has successfully cared for the patient");
+            Console.WriteLine($"{Name} has successfully cared for the patient");
         }
 
         public override void PaySalary()
