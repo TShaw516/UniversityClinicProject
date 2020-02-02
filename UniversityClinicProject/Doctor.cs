@@ -7,7 +7,7 @@ namespace UniversityClinicProject
     public class Doctor : Employee
     {
         //new object
-        Patient drPatient = new Patient();
+        Patient newPatient = new Patient();
 
         //Properties
         public string Specialty { get; set; }
@@ -29,7 +29,7 @@ namespace UniversityClinicProject
         }
 
         //Methods
-        public override void DisplayInfo()
+        public override void DisplayInfo(int counter)
         {
             Console.WriteLine($"\n1. {Name} ID Number:{IDNumber} Salary:${Salary}, Specialty:{Specialty}");
            
@@ -38,18 +38,16 @@ namespace UniversityClinicProject
         public override void DrawBlood(Patient newPatient)
         {
             newPatient.BloodLevel -= 2;
-           
             Console.WriteLine($"Dr. {Name} has successfully reduced by {newPatient.BloodLevel}");
         }
 
-        public override void CareForPatient()
+        public override void CareForPatient(Patient newPatient)
         {
-            int healthStatus = drPatient.HealthStatus;
-            healthStatus += 2;
+            newPatient.HealthStatus += 2;
             Console.WriteLine($"Dr. {Name} has successfully cared for the patient");
         }
 
-        public override void PaySalary()
+        public override void PaySalary(Doctor myDoctor)
         {
             if (Paid == false)
             { Console.WriteLine($"Dr. {Name} has been paid");

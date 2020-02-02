@@ -31,55 +31,64 @@ namespace UniversityClinicProject
         public void DisplayEmployees()
         {
             Console.WriteLine("\nClick on an employee to find out more..\n");
-
+            int counter = 1;
             foreach (Employee employees in employeeList)
             {
-                employees.DisplayInfo();
+  
+                employees.DisplayInfo(counter);
+                counter++;
+                
             } 
-        }    
+        }
 
-       
+
 
         public void SelectEmployee(Patient newPatient)
         {
 
             Doctor myDoctor = new Doctor();
+            Nurse myNurse = new Nurse();
 
             //user inserts chosen employee that corresponds to list index
             int employeeChoice = Convert.ToInt32(Console.ReadLine());
             Employee chosenEmployee = employeeList[employeeChoice - 1];
             Console.Clear();
-
-            //menu to choose task for employee
-            Console.WriteLine("What do you want your employee to do?");
-            Console.WriteLine("1. Draw Blood");
-            Console.WriteLine("2. Care For Patient");
-            Console.WriteLine("3. Pay Employee");
-            Console.WriteLine("4. Exit");
-           string taskChoice = Console.ReadLine();
-
-            switch (taskChoice)
+            if (chosenEmployee == employeeList[0])
             {
-                case "1":
-                   DrawBlood(newPatient);
-                   
-                    break;
 
-                case "2":
-                    CareForPatient();
-                    break;
+                //menu to choose task for employee
+                Console.WriteLine("What do you want your employee to do?");
+                Console.WriteLine("1. Draw Blood");
+                Console.WriteLine("2. Care For Patient");
+                Console.WriteLine("3. Pay Employee");
+                Console.WriteLine("4. Exit");
 
-                case "3":
-                    PaySalary();
-                    break;
+                string taskChoice = Console.ReadLine();
 
-                case "4":
-                    Console.Clear();
-                    break;
-
+                switch (taskChoice)
+                {
+                    case "1":
+                        myDoctor.DrawBlood(newPatient);
+                        break;
+                    case "2":
+                        myDoctor.CareForPatient(newPatient);
+                        break;
+                    case "3":
+                        PaySalary(myDoctor);
+                        break;
+                    case "4":
+                        Console.Clear();
+                        break;
+                }
             }
-
+            else
+                    {
+                Console.WriteLine("you lose");
+                    }
+            
+         
         }
+       
 
         public void HasBeenPaid()
         {
@@ -89,7 +98,7 @@ namespace UniversityClinicProject
             { Console.WriteLine("The Employee has not been paid"); }
         }
 
-        public virtual void DisplayInfo()
+        public virtual void DisplayInfo(int counter)
         { 
         
         }
@@ -102,12 +111,12 @@ namespace UniversityClinicProject
 
         }
 
-        public virtual void CareForPatient()
+        public virtual void CareForPatient(Patient newPatient)
         { 
         
         }
 
-        public virtual void PaySalary()
+        public virtual void PaySalary(Doctor myDoctor)
         { 
         
         }

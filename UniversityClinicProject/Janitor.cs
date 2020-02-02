@@ -23,12 +23,12 @@ namespace UniversityClinicProject
         
         }
         //Methods
-        public override void DisplayInfo()
+        public override void DisplayInfo(int counter)
         {
             Console.WriteLine($"\n3. {Name} ID Number:{IDNumber} Salary:${Salary}");
         }
 
-        public override void PaySalary()
+        public override void PaySalary(Doctor myDoctor)
         {
             if (Paid == false)
             { Console.WriteLine($"Janitor {Name} has been paid");

@@ -20,5 +20,10 @@ namespace UniversityClinicProject
         }
 
         //Methods
+        public void DisplayBloodLevelandHealth()
+        {
+            Console.WriteLine($"Blood Level: {BloodLevel} | Health Status:  {HealthStatus}");
+        
+        }
     }
 }

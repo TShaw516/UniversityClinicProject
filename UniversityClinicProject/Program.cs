@@ -28,7 +28,7 @@ namespace UniversityClinicProject
 
             while (inHospital)
             {
-                Console.WriteLine("\nUniversity Clinic Hospital:");
+                Console.WriteLine("\nWelcome to University Clinic Hospital Database");
                 Console.WriteLine("\n1. Employee List:  ");
                 Console.WriteLine("2. Exit");
                 mainMenuChoice = Console.ReadLine();
