@@ -24,16 +24,30 @@ namespace ClinicProject.Test
         public void Doctor_DrawBlood_Reduce_By_2()
         {
             //Arrange
-            var newDoctor = new Doctor();
-            var DocPatient = new Patient();
+            var myDoctor = new Doctor();
+            var newPatient = new Patient();
+            var currentBlood = newPatient.BloodLevel;
 
             //Act
-            DocPatient.BloodLevel = 0;
-            //DocPatient.DrawBlood();
+            newPatient.BloodLevel = 20;
+            myDoctor.DrawBlood(newPatient);
 
             //Assert
-
-
+            Assert.Equal(currentBlood - 2, newPatient.BloodLevel);
         }
-    }
-}
+
+        [Fact]
+        public void CareForPatient_Health_Goes_Up()
+        {
+            //Arrange
+            var myDoctor = new Doctor();
+            var newPatient = new Patient();
+            var currentHealth = newPatient.HealthStatus;
+            newPatient.HealthStatus = 10;
+
+            // Act
+            myDoctor.CareForPatient(newPatient);
+
+            // Assert
+            Assert.Equal(currentHealth + 2, newPatient.HealthStatus);
+        }

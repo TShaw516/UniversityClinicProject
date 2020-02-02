@@ -27,25 +27,19 @@ namespace UniversityClinicProject
         }
 
         //Methods
-
         public void DisplayEmployees()
         {
             Console.WriteLine("\nClick on an employee to find out more..\n");
             int counter = 1;
             foreach (Employee employees in employeeList)
             {
-  
                 employees.DisplayInfo(counter);
-                counter++;
-                
+                counter++;  
             } 
         }
 
-
-
         public void SelectEmployee(Patient newPatient)
         {
-
             Doctor myDoctor = new Doctor();
             Nurse myNurse = new Nurse();
 
@@ -53,9 +47,9 @@ namespace UniversityClinicProject
             int employeeChoice = Convert.ToInt32(Console.ReadLine());
             Employee chosenEmployee = employeeList[employeeChoice - 1];
             Console.Clear();
+
             if (chosenEmployee == employeeList[0])
             {
-
                 //menu to choose task for employee
                 Console.WriteLine("What do you want your employee to do?");
                 Console.WriteLine("1. Draw Blood");
@@ -83,12 +77,9 @@ namespace UniversityClinicProject
             }
             else
                     {
-                Console.WriteLine("you lose");
-                    }
-            
-         
+                Console.WriteLine($"Employee can't draw blood.  Only Medical Profesionals");
+                     }
         }
-       
 
         public void HasBeenPaid()
         {
@@ -107,7 +98,6 @@ namespace UniversityClinicProject
         {
             
 
-            Console.WriteLine($"Employee can't draw blood.  Only Medical Profesionals");
 
         }
 
