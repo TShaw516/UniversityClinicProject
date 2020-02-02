@@ -35,13 +35,16 @@ namespace UniversityClinicProject
             foreach (Employee employees in employeeList)
             {
                 employees.DisplayInfo();
-             
-            }
+            } 
+        }    
 
-        }
+       
 
-        public void SelectEmployee()
+        public void SelectEmployee(Patient newPatient)
         {
+
+            Doctor myDoctor = new Doctor();
+
             //user inserts chosen employee that corresponds to list index
             int employeeChoice = Convert.ToInt32(Console.ReadLine());
             Employee chosenEmployee = employeeList[employeeChoice - 1];
@@ -58,7 +61,7 @@ namespace UniversityClinicProject
             switch (taskChoice)
             {
                 case "1":
-                    DrawBlood();
+                   DrawBlood(newPatient);
                    
                     break;
 
@@ -91,9 +94,12 @@ namespace UniversityClinicProject
         
         }
     
-        public virtual void DrawBlood()
-        { 
-        
+        public virtual void DrawBlood(Patient newPatient)
+        {
+            
+
+            Console.WriteLine($"Employee can't draw blood.  Only Medical Profesionals");
+
         }
 
         public virtual void CareForPatient()

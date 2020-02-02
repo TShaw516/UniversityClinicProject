@@ -38,7 +38,7 @@ namespace UniversityClinicProject
                 {
                     case "1":
                         newEmployee.DisplayEmployees();
-                        newEmployee.SelectEmployee();
+                        newEmployee.SelectEmployee(newPatient);
                         break;
 
 

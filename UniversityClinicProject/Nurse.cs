@@ -31,27 +31,28 @@ namespace UniversityClinicProject
         //Methods
         public override void DisplayInfo()
         {
-            Console.WriteLine($"\n2. {Name} ID Number:{IDNumber} Salary:${Salary} # of Patients:{NumOfPatients},{Paid}");
+            Console.WriteLine($"\n2. {Name} ID Number: {IDNumber} Salary: {Salary} # of Patients:{NumOfPatients}");
         }
         
-        public override void DrawBlood()
+        public override void DrawBlood(Patient newPatient)
         {
-            int bloodDrawn = nursePatient.BloodLevel;
-            bloodDrawn -= 1;
+            nursePatient.BloodLevel -= 1;
             Console.WriteLine($"Nurse {Name} has successfully drawn blood");
         }
 
+
         public override void CareForPatient()
         {
-            int healthStatus = nursePatient.HealthStatus;
-            healthStatus += 1;
+            nursePatient.HealthStatus += 1;
             Console.WriteLine($"{Name} has successfully cared for the patient");
         }
 
         public override void PaySalary()
         {
             if (Paid == false)
-            { Console.WriteLine($"Nurse {Name} has been paid"); }
+            { Console.WriteLine($"Nurse {Name} has been paid");
+                Paid = true;
+            }
             else
             {Console.WriteLine($"Nurse {Name} has already been paid");}
         }

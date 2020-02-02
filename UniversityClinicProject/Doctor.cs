@@ -31,16 +31,15 @@ namespace UniversityClinicProject
         //Methods
         public override void DisplayInfo()
         {
-            Console.WriteLine($"\n1. {Name} ID Number:{IDNumber} Salary:${Salary}, " +
-                $"{Paid}, Specialty:{Specialty}");
+            Console.WriteLine($"\n1. {Name} ID Number:{IDNumber} Salary:${Salary}, Specialty:{Specialty}");
            
         }
 
-        public override void DrawBlood()
+        public override void DrawBlood(Patient newPatient)
         {
-            int bloodDrawn = drPatient.BloodLevel;
-            bloodDrawn -= 2;
-            Console.WriteLine($"Dr. {Name} has successfully drawn blood!");
+            newPatient.BloodLevel -= 2;
+           
+            Console.WriteLine($"Dr. {Name} has successfully reduced by {newPatient.BloodLevel}");
         }
 
         public override void CareForPatient()
@@ -53,7 +52,9 @@ namespace UniversityClinicProject
         public override void PaySalary()
         {
             if (Paid == false)
-            { Console.WriteLine($"Dr. {Name} has been paid"); }
+            { Console.WriteLine($"Dr. {Name} has been paid");
+                Paid = true;
+            }
             else
             { Console.WriteLine($"Dr. {Name} has already been paid"); }
         }

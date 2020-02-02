@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UniversityClinicProject
 {
-    class Patient
+    public class Patient
     {
         //Properties
         private int bloodLevel;
