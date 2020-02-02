@@ -64,7 +64,7 @@ namespace UniversityClinicProject
         {
             int medicalEmployeeChoice;
             medicalEmployeeChoice = 1;
-            Console.WriteLine("Select the pet you want to interact with!");
+            Console.WriteLine("Select the employee in order to perform a task: ");
 
             foreach (Employee newEmployee in medicalEmployeeList)
             {
@@ -77,7 +77,7 @@ namespace UniversityClinicProject
         {
             int regularEmployeeChoice;
             regularEmployeeChoice = 1;
-            Console.WriteLine("Select the pet you want to interact with!");
+            Console.WriteLine("Select the employee in order to perform a task: ");
 
             foreach (Employee newEmployee in medicalEmployeeList)
             {

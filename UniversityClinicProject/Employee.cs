@@ -6,8 +6,7 @@ namespace UniversityClinicProject
 {
     public class Employee
     {
-        //Create a new List
-        public List<Employee> employeeList = new List<Employee>();
+
 
         //Properties
         public string Name { get; set; }
@@ -30,10 +29,25 @@ namespace UniversityClinicProject
         public void MainMenu()
         {
             Console.WriteLine("Main Menu:");
-            Console.WriteLine("Show Medical Employee List");
-            Console.WriteLine("Show Regular Employee List");
-            Console.WriteLine("Exit Application");
+            Console.WriteLine("1- Show Medical Employee List");
+            Console.WriteLine("2- Show Regular Employee List");
+            Console.WriteLine("3- Exit Application");
             Console.WriteLine("Select a number to perform an action");
+           
+        }
+
+        public void MedicalEmployeeMenu()
+        {
+            Console.WriteLine("1- Draw Blood");
+            Console.WriteLine("2- Care for Patient");
+            Console.WriteLine("3- Pay the Employee");
+        }
+
+        public void RegularEmployeeMenu()
+        {
+            Console.WriteLine("1- Sweep");
+            Console.WriteLine("2- Start Phone Calls");
+            Console.WriteLine("3- Pay the Employee");
         }
 
         /*public void DisplayEmployees()
@@ -116,7 +130,7 @@ namespace UniversityClinicProject
         
         }
 
-        public virtual void PaySalary(Doctor myDoctor)
+        public virtual void PaySalary()
         { 
         
         }

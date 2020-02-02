@@ -51,3 +51,5 @@ namespace ClinicProject.Test
             // Assert
             Assert.Equal(currentHealth + 2, newPatient.HealthStatus);
         }
+    }
+}
