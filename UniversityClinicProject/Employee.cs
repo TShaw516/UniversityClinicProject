@@ -58,13 +58,16 @@ namespace UniversityClinicProject
             switch (taskChoice)
             {
                 case "1":
-                    DrawBlood;
+                    DrawBlood();
+                   
                     break;
 
                 case "2":
+                    CareForPatient();
                     break;
 
                 case "3":
+                    PaySalary();
                     break;
 
                 case "4":
