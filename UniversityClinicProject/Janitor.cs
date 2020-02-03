@@ -7,6 +7,7 @@ namespace UniversityClinicProject
     public class Janitor : Employee
     {
         //Properties
+        public bool Sweeping { get; set; }
 
         //Constructor
         public Janitor() : base()
@@ -20,6 +21,7 @@ namespace UniversityClinicProject
             Name = name;
             IDNumber = iDNumber;
             Paid = false;
+            Sweeping = false;
         
         }
         //Methods
@@ -36,6 +38,11 @@ namespace UniversityClinicProject
             }
             else
             { Console.WriteLine($"Janitor {Name} has already been paid"); }
+        }
+
+        public void BeginSweeping()
+        { 
+        if (BeginSweeping == false)
         }
     }
 }

@@ -17,10 +17,10 @@ namespace UniversityClinicProject
             Hospital theHospital = new Hospital();
 
             //adding employees to list
-            theHospital.medicalEmployeeList.Add(newDoctor);
-            theHospital.medicalEmployeeList.Add(newNurse);
-            theHospital.regularEmployeeList.Add(newJanitor);
-            theHospital.regularEmployeeList.Add(newReceptionist);
+            theHospital.AddDoctorToMedicalEmployee(newDoctor);
+            theHospital.AddNurseToMedicalEmployee(newNurse);
+            theHospital.AddJanitorToHospital(newJanitor);
+            theHospital.AddReceptionistToHospital(newReceptionist);
             theHospital.patientList.Add(newPatient);
 
             bool exitHospital = false;
@@ -37,6 +37,11 @@ namespace UniversityClinicProject
                 switch (chooseEmployeeType)
                 {
                     case "1":
+                        theHospital.ShowAllEmployees();
+                        ScreenClear();
+                        break;
+                    
+                    case "2":
 
                         theHospital.ListMedicalEmployeeSelection();
                         newEmployee = theHospital.SelectMedicalEmployee();
@@ -65,7 +70,7 @@ namespace UniversityClinicProject
                         }
                         break;
 
-                    case "2":
+                    case "3":
                         theHospital.ListRegularEmployeeSelection();
                         newEmployee = theHospital.SelectRegularEmployee();
                         Console.WriteLine($"You are now interacting with {newEmployee.Name}");
@@ -75,7 +80,7 @@ namespace UniversityClinicProject
                         switch (regEmployeeChoice)
                         {
                             case "1":
-                                break;
+                                
                             
                             case "2":
                                 break;
@@ -86,7 +91,7 @@ namespace UniversityClinicProject
                         }
                         break;
 
-                    case "3":
+                    case "4":
                         exitHospital = true;
                         break;
 

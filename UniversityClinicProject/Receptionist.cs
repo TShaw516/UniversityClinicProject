@@ -7,8 +7,8 @@ namespace UniversityClinicProject
     public class Receptionist : Employee
     {
         //Properties
-       // public bool OnThePhone { get; set; }
-       // private bool onThePhone;
+        public bool OnThePhone { get; set; }
+      
 
         //Constructor
         public Receptionist() : base()
@@ -21,6 +21,7 @@ namespace UniversityClinicProject
             Name = name;
             IDNumber = iDNumber;
             Paid = false;
+            OnThePhone = false;
         }
         //Methods
         public override void DisplayInfo()
@@ -29,18 +30,21 @@ namespace UniversityClinicProject
               
         
         }
-        /* public void IsReceptionistOnPhone()
-         {
-             onThePhone = true;
-             if (onThePhone)
-             {
-                 Console.WriteLine("On the phone");
-             }
-             else 
-             {
-                 Console.WriteLine("Not on the phone");
-             }
-         */
+
+        public void IsReceptionistOnPhone()
+        {
+
+            if (OnThePhone == false)
+            {
+                Console.WriteLine($"{Name} is now on the phone");
+                OnThePhone = true;
+            }
+            else
+            {
+                Console.WriteLine("The Receptionist is already on the Phone");
+            }
+        }
+         
 
         public override void PaySalary()
         {

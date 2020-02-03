@@ -64,6 +64,14 @@ namespace UniversityClinicProject
             }
         }
 
+        public void ShowAllEmployees()
+        {
+            for (int i = 0; i < employeeList.Count; i++)
+            {
+                employeeList[i].DisplayInfo();
+            }
+        }
+
 
         public void ListMedicalEmployeeSelection()
         {

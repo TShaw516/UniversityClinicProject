@@ -29,9 +29,10 @@ namespace UniversityClinicProject
         public void MainMenu()
         {
             Console.WriteLine("Main Menu:");
-            Console.WriteLine("1- Show Medical Employee List");
-            Console.WriteLine("2- Show Regular Employee List");
-            Console.WriteLine("3- Exit Application");
+            Console.WriteLine("1- Show List of All Employees");
+            Console.WriteLine("2- Show Medical Employee List");
+            Console.WriteLine("3- Show Regular Employee List");
+            Console.WriteLine("4- Exit Application");
             Console.WriteLine("Select a number to perform an action");
            
         }
