@@ -24,8 +24,8 @@ namespace UniversityClinicProject
             theHospital.patientList.Add(newPatient);
 
             bool exitHospital = false;
-            string employeeTypeSelection;
-            string medicalEmployeeActionSelection;
+            string chooseEmployeeType;
+            string medEmployeeChoice;
             string regularEmployeeActionSelection;
 
             //main menu
@@ -33,17 +33,18 @@ namespace UniversityClinicProject
             do
             {
                 newEmployee.MainMenu();
-                employeeTypeSelection = Console.ReadLine();
+                chooseEmployeeType = Console.ReadLine();
                 
-                switch(employeeTypeSelection)
+                switch(chooseEmployeeType)
                 {   
                     case "1":
                         theHospital.ShowAllMedicalEmployeeInfo();
-                        medicalEmployeeActionSelection = Console.ReadLine();
+                        medEmployeeChoice = Console.ReadLine();
                         newEmployee.MedicalEmployeeMenu();
+                        string medEmployeeAction = Console.ReadLine();
                         ScreenClear();
 
-                    switch (medicalEmployeeActionSelection)
+                    switch (medEmployeeAction)
                         {
                             case "1":
                             if (newEmployee == newNurse)
