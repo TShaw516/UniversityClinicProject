@@ -24,7 +24,11 @@ namespace UniversityClinicProject
             theHospital.patientList.Add(newPatient);
 
             bool exitHospital = false;
+
             string employeeTypeSelection;
+
+            string chooseEmployeeType;
+            
             string regularEmployeeActionSelection;
 
             //main menu
@@ -32,43 +36,39 @@ namespace UniversityClinicProject
             do
             {
                 newEmployee.MainMenu();
-                employeeTypeSelection = Console.ReadLine();
-                
-                switch(employeeTypeSelection)
-                {   
+                chooseEmployeeType = Console.ReadLine();
+
+                switch (chooseEmployeeType)
+                {
                     case "1":
+
                         theHospital.ListMedicalEmployeeSelection();
                         newEmployee = theHospital.SelectMedicalEmployee();
                         Console.WriteLine($"You are now interacting with {newEmployee.Name}");
                         newEmployee.MedicalEmployeeMenu();
-                        string medicalEmployeeActionSelection = Console.ReadLine();
+                        string medEmployeeChoice = Console.ReadLine();
 
 
 
 
-                        switch (medicalEmployeeActionSelection)
-                        {   
+                        switch (medEmployeeChoice)
+                        {
                             case "1":
-                                
-                                    newEmployee.DrawBlood(newPatient);
+
+                                newEmployee.DrawBlood(newPatient);
                                 break;
-                            
+
                             case "2":
-                                if (newEmployee == newNurse)
-                                {
-                                    newNurse.CareForPatient(newPatient);
-                                }
-                                else
-                                {
-                                    newDoctor.CareForPatient(newPatient);
-                                }
+                    
+                                newEmployee.CareForPatient(newPatient);
                                 break;
-                            
+                               
+
                             case "3":
                                 newEmployee.PaySalary();
                                 break;
-                                
-                                    
+
+
                         }
                         break;
 
@@ -77,16 +77,16 @@ namespace UniversityClinicProject
                         regularEmployeeActionSelection = Console.ReadLine();
                         newEmployee.RegularEmployeeMenu();
                         ScreenClear();
-                        
+
 
                         switch (regularEmployeeActionSelection)
-                        {   
+                        {
                             case "1":
-                            break;
+                                break;
                             case "2":
-                            break;
+                                break;
                             case "3":
-                            break;
+                                break;
                         }
                         break;
 
@@ -95,19 +95,22 @@ namespace UniversityClinicProject
                         break;
 
 
-                }
-            } while (exitHospital == false);
 
-           
-        }
+                }
+            } while (exitHospital == false); 
+
+
             static void ScreenClear()
             {
-            Console.WriteLine("Press any key to return to the Main Menu");
-            Console.ReadKey();
-            Console.Clear();
-         }
+                Console.WriteLine("Press any key to return to the Main Menu");
+                Console.ReadKey();
+                Console.Clear();
+            }
+        }
     }
-}
+}    
+    
+ 
 
 
 

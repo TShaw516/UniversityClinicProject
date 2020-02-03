@@ -37,14 +37,14 @@ namespace UniversityClinicProject
         public override void DrawBlood(Patient newPatient)
         {
             newPatient.BloodLevel -= 1;
-            Console.WriteLine($"Nurse {Name} has successfully drawn blood");
+            Console.WriteLine($"{Name} has successfully drawn blood. The new blood level is {newPatient.BloodLevel}");
         }
 
 
         public override void CareForPatient(Patient newPatient)
         {
             newPatient.HealthStatus += 1;
-            Console.WriteLine($"{Name} has successfully cared for the patient");
+            Console.WriteLine($"{Name} has successfully cared for the patient. The new health status is {newPatient.HealthStatus}");
         }
 
         public override void PaySalary()
