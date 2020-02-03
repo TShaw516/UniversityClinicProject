@@ -6,7 +6,7 @@ namespace UniversityClinicProject
 {
     public class Employee
     {
-
+        Hospital theHospital = new Hospital();
 
         //Properties
         public string Name { get; set; }
@@ -35,6 +35,8 @@ namespace UniversityClinicProject
             Console.WriteLine("Select a number to perform an action");
            
         }
+
+
 
         public void MedicalEmployeeMenu()
         {

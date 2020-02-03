@@ -25,7 +25,6 @@ namespace UniversityClinicProject
 
             bool exitHospital = false;
             string employeeTypeSelection;
-            string medicalEmployeeActionSelection;
             string regularEmployeeActionSelection;
 
             //main menu
@@ -38,22 +37,20 @@ namespace UniversityClinicProject
                 switch(employeeTypeSelection)
                 {   
                     case "1":
-                        theHospital.ShowAllMedicalEmployeeInfo();
-                        medicalEmployeeActionSelection = Console.ReadLine();
+                        theHospital.ListMedicalEmployeeSelection();
+                        newEmployee = theHospital.SelectMedicalEmployee();
+                        Console.WriteLine($"You are now interacting with {newEmployee.Name}");
                         newEmployee.MedicalEmployeeMenu();
-                        ScreenClear();
+                        string medicalEmployeeActionSelection = Console.ReadLine();
 
-                    switch (medicalEmployeeActionSelection)
-                        {
+
+
+
+                        switch (medicalEmployeeActionSelection)
+                        {   
                             case "1":
-                            if (newEmployee == newNurse)
-                                {
-                                    newNurse.DrawBlood(newPatient);
-                                }
-                                else 
-                                {
-                                    newDoctor.DrawBlood(newPatient);
-                                }
+                                
+                                    newEmployee.DrawBlood(newPatient);
                                 break;
                             
                             case "2":
