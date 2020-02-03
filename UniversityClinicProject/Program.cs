@@ -54,16 +54,19 @@ namespace UniversityClinicProject
                             case "1":
 
                                 newEmployee.DrawBlood(newPatient);
+                                ScreenClear();
                                 break;
 
                             case "2":
                     
                                 newEmployee.CareForPatient(newPatient);
+                                ScreenClear();
                                 break;
                                
 
                             case "3":
                                 newEmployee.PaySalary();
+                                ScreenClear();
                                 break;
 
 
@@ -80,13 +83,18 @@ namespace UniversityClinicProject
                         switch (regEmployeeChoice)
                         {
                             case "1":
-                                
+                                newJanitor.BeginSweeping();
+                                ScreenClear();
+                                break;
                             
                             case "2":
+                                newReceptionist.IsReceptionistOnPhone();
+                                ScreenClear();
                                 break;
                             
                             case "3":
                                 newEmployee.PaySalary();
+                                ScreenClear();
                                 break;
                         }
                         break;

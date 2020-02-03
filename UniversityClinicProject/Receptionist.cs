@@ -34,14 +34,14 @@ namespace UniversityClinicProject
         public void IsReceptionistOnPhone()
         {
 
-            if (OnThePhone == false)
+            if (OnThePhone == true)
             {
-                Console.WriteLine($"{Name} is now on the phone");
-                OnThePhone = true;
+                Console.WriteLine($"{Name} is on the phone");
             }
+  
             else
             {
-                Console.WriteLine("The Receptionist is already on the Phone");
+                Console.WriteLine("The Receptionist is not on the Phone");
             }
         }
          

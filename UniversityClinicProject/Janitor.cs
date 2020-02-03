@@ -21,7 +21,7 @@ namespace UniversityClinicProject
             Name = name;
             IDNumber = iDNumber;
             Paid = false;
-            Sweeping = false;
+            Sweeping = true;
         
         }
         //Methods
@@ -41,8 +41,17 @@ namespace UniversityClinicProject
         }
 
         public void BeginSweeping()
-        { 
-        if (BeginSweeping == false)
+        {
+            
+            if (Sweeping == true)
+            {
+                Console.WriteLine($"{Name} is sweeping");
+              
+            }
+            else
+            {
+                Console.WriteLine($"{Name} is not sweeping");
+            }
         }
     }
 }
