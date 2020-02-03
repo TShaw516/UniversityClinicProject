@@ -7,6 +7,7 @@ namespace UniversityClinicProject
     public class Hospital
     {
         // Properties
+        public List<Employee> employeeList = new List<Employee>();
         public List<Employee> medicalEmployeeList = new List<Employee>();
         public List<Employee> regularEmployeeList = new List<Employee>();
         public List<Patient> patientList = new List<Patient>();
@@ -20,11 +21,13 @@ namespace UniversityClinicProject
         //Methods
         public void AddDoctorToMedicalEmployee(Doctor myDoctor)
         {
+            employeeList.Add(myDoctor);
             medicalEmployeeList.Add(myDoctor);
         }
 
         public void AddNurseToMedicalEmployee(Nurse myNurse)
         {
+            employeeList.Add(myNurse);
             medicalEmployeeList.Add(myNurse);
         }
 
@@ -35,11 +38,13 @@ namespace UniversityClinicProject
 
         public void AddReceptionistToHospital(Receptionist myReceptionist)
         {
+            employeeList.Add(myReceptionist);
             regularEmployeeList.Add(myReceptionist);
         }
 
         public void AddJanitorToHospital(Janitor myJanitor)
         {
+            employeeList.Add(myJanitor);
             regularEmployeeList.Add(myJanitor);
         }
 
@@ -79,7 +84,7 @@ namespace UniversityClinicProject
             regularEmployeeChoice = 1;
             Console.WriteLine("Select the employee in order to perform a task: ");
 
-            foreach (Employee newEmployee in medicalEmployeeList)
+            foreach (Employee newEmployee in regularEmployeeList)
             {
                 Console.WriteLine($"{regularEmployeeChoice}. {newEmployee.Name} | {newEmployee.IDNumber}");
                 regularEmployeeChoice++;

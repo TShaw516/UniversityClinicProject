@@ -40,7 +40,7 @@ namespace UniversityClinicProject
             newPatient.BloodLevel -= 2;
             Console.WriteLine($"Dr. {Name} has successfully drawn blood. The new blood level is {newPatient.BloodLevel}");
         }
-
+         
         public override void CareForPatient(Patient newPatient)
         {
             newPatient.HealthStatus += 2;
