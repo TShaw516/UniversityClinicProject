@@ -34,17 +34,16 @@ namespace UniversityClinicProject
             {
                 newEmployee.MainMenu();
                 employeeTypeSelection = Console.ReadLine();
-
-                switch (employeeTypeSelection)
+                
+                switch(employeeTypeSelection)
                 {   
                     case "1":
                         theHospital.ShowAllMedicalEmployeeInfo();
                         medicalEmployeeActionSelection = Console.ReadLine();
                         newEmployee.MedicalEmployeeMenu();
                         ScreenClear();
-                        
 
-                        switch (medicalEmployeeActionSelection)
+                    switch (medicalEmployeeActionSelection)
                         {
                             case "1":
                             if (newEmployee == newNurse)
@@ -56,9 +55,20 @@ namespace UniversityClinicProject
                                     newDoctor.DrawBlood(newPatient);
                                 }
                                 break;
+                            
                             case "2":
+                                if (newEmployee == newNurse)
+                                {
+                                    newNurse.CareForPatient(newPatient);
+                                }
+                                else
+                                {
+                                    newDoctor.CareForPatient(newPatient);
+                                }
                                 break;
+                            
                             case "3":
+                                newEmployee.PaySalary();
                                 break;
                                 
                                     
@@ -77,7 +87,9 @@ namespace UniversityClinicProject
                             case "1":
                             break;
                             case "2":
-                            break;  
+                            break;
+                            case "3":
+                            break;
                         }
                         break;
 
@@ -91,12 +103,12 @@ namespace UniversityClinicProject
 
            
         }
-        static void ScreenClear()
-        {
+            static void ScreenClear()
+            {
             Console.WriteLine("Press any key to return to the Main Menu");
             Console.ReadKey();
             Console.Clear();
-        }
+         }
     }
 }
 
@@ -107,3 +119,8 @@ namespace UniversityClinicProject
 
 
 
+
+
+
+
+              
