@@ -17,8 +17,8 @@ namespace UniversityClinicProject
             Hospital theHospital = new Hospital();
 
             //adding employees to list
-            theHospital.AddDoctorToMedicalEmployee(newDoctor);
-            theHospital.AddNurseToMedicalEmployee(newNurse);
+            theHospital.AddDoctorToHospital(newDoctor);
+            theHospital.AddNurseToHospital(newNurse);
             theHospital.AddJanitorToHospital(newJanitor);
             theHospital.AddReceptionistToHospital(newReceptionist);
             theHospital.patientList.Add(newPatient);
@@ -38,6 +38,7 @@ namespace UniversityClinicProject
                 {
                     case "1":
                         theHospital.ShowAllEmployees();
+                        Console.WriteLine("\n");
                         ScreenClear();
                         break;
                     

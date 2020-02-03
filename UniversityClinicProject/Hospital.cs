@@ -19,13 +19,13 @@ namespace UniversityClinicProject
         }
 
         //Methods
-        public void AddDoctorToMedicalEmployee(Doctor myDoctor)
+        public void AddDoctorToHospital(Doctor myDoctor)
         {
             employeeList.Add(myDoctor);
             medicalEmployeeList.Add(myDoctor);
         }
 
-        public void AddNurseToMedicalEmployee(Nurse myNurse)
+        public void AddNurseToHospital(Nurse myNurse)
         {
             employeeList.Add(myNurse);
             medicalEmployeeList.Add(myNurse);
