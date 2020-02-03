@@ -33,6 +33,7 @@ namespace UniversityClinicProject
             {
                 newEmployee.MainMenu();
                 chooseEmployeeType = Console.ReadLine();
+                Console.Clear();
 
                 switch (chooseEmployeeType)
                 {
@@ -46,9 +47,11 @@ namespace UniversityClinicProject
 
                         theHospital.ListMedicalEmployeeSelection();
                         newEmployee = theHospital.SelectMedicalEmployee();
+                        Console.Clear();
                         Console.WriteLine($"You are now interacting with {newEmployee.Name}");
                         newEmployee.MedicalEmployeeMenu();
                         string medEmployeeChoice = Console.ReadLine();
+                        Console.Clear();
 
                         switch (medEmployeeChoice)
                         {
@@ -80,6 +83,7 @@ namespace UniversityClinicProject
                         Console.WriteLine($"You are now interacting with {newEmployee.Name}");
                         newEmployee.RegularEmployeeMenu();
                         string regEmployeeChoice = Console.ReadLine();
+                        Console.Clear();
                             
                         switch (regEmployeeChoice)
                         {
